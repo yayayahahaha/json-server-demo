@@ -41,7 +41,7 @@ module.exports = function() {
 
 json-server --watch db.js --port 3000
 
-#Reference Resource
-[Chance.js](http://chancejs.com/)
-[Moment.js](https://momentjs.com)
-[Lodash.js](https://lodash.com/docs/4.17.10)
+#Reference Resource  
+[Chance.js](http://chancejs.com/)  
+[Moment.js](https://momentjs.com)  
+[Lodash.js](https://lodash.com/docs/4.17.10)  

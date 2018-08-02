@@ -6,7 +6,7 @@ How to run json-server
 3. touch db.js
 
 ```javascript
-// db.js
+//db.js
 var Chance = require('chance');
 var moment = require('moment');
 var _ = require('lodash');
@@ -23,20 +23,25 @@ var randomDateRange = lib.randomDateRange;
 var countTotal = lib.countTotal;
 
 module.exports = function() {
-  var data = {
-    api1: [],
-    api2: {}
-  };
+    var data = {
+        api1: [],
+        api2: {}
+    };
 
-  for (var i = 0; i < 20; i++) {
-    data.api1.push({
-      randomNumber: Math.random()
-    });
-  }
-  data.api2.key = 'value';
+    for (var i = 0; i < 20; i++) {
+        data.api1.push({
+            randomNumber: Math.random()
+        });
+    }
+    data.api2.key = 'value';
 
-  return data;
+    return data;
 };
 ```
 
 json-server --watch db.js --port 3000
+
+#Reference Resource
+[Chance.js](http://chancejs.com/)
+[Moment.js](https://momentjs.com)
+[Lodash.js](https://lodash.com/docs/4.17.10)

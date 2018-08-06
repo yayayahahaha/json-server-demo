@@ -15,17 +15,22 @@ var randomDateRange = lib.randomDateRange;
 var countTotal = lib.countTotal;
 
 module.exports = function() {
-  var data = {
-    api1: [],
-    api2: {}
-  };
+    var data = {
+        message: []
+    };
 
-  for (var i = 0; i < 20; i++) {
-    data.api1.push({
-      randomNumber: Math.random()
-    });
-  }
-  data.api2.key = 'value';
+    for (var i = 0; i < 20; i++) {
+        var tempObject = {
+            content: chance.paragraph({ sentences: 1 }),
+            start_time: randomDate(),
+            end_time: '',
+            state: randomNumberFun(0, 1),
+            sort: i
+        };
+        tempObject.end_time = moment(tempObject.start_time).add(randomNumberFun(7, 30), 'days').format(formatString);
 
-  return data;
+        data.message.push(tempObject);
+    }
+
+    return data;
 };
